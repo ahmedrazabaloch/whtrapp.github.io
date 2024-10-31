@@ -1,0 +1,66 @@
+/* Responsive Styles */
+
+@media (max-width: 480px) {
+  .whtrlive {
+    flex-direction: column-reverse;
+    max-height: fit-content;
+    /* background-size: contain; */
+    overflow: scroll !important;
+  }
+  .container {
+    padding: 10px;
+    width: 100%;
+  }
+  .top {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .top h1 {
+    font-size: 1rem;
+  }
+  .left {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    margin-top: 10px;
+  }
+  .left > :first-child {
+    width: fit-content;
+  }
+  .left h2 {
+    font-size: 1rem;
+    text-align: right;
+  }
+  .left > :last-child {
+    width: fit-content;
+  }
+  .place {
+    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: left;
+    align-items: self-start;
+  }
+  .place > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .weather-temperature {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .today-temperature {
+    font-size: 1.5rem !important;
+  }
+  .tomorrow-temperature {
+    margin: 0px;
+    text-align: center !important;
+    font-size: 1rem;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+}

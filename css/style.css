@@ -263,7 +263,7 @@ input {
   fill: black;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .sidebar {
     width: 30%;
     padding: 20px;
@@ -382,7 +382,7 @@ input {
   .weather-icon {
     width: 60px;
   }
-}
+} */
 /* Style for the Explore Button */
 
 /* 
