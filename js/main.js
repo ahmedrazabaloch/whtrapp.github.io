@@ -45,6 +45,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
     'New York', 'California', 'Paris', 'Tokyo', 'Bali', 'Sydney', 'Dubai',
   ];
 
+  const searchicon = document.querySelector( '#search-bar' ).addEventListener( 'click', () => {
+    alert( 'Please type a city name in the search bar' );
+  } );
+
   async function updateWeatherDisplay( city = cityInput ) {
     showSpinner();
     try {
@@ -206,10 +210,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
   updateWeatherDisplay();
   displayLastVisited();
   autocomplete( document.getElementById( "search" ), getCitiesList() );
-  
+
   // Update weather every 60 minutes
-  setInterval(() => {
+  setInterval( () => {
     updateWeatherDisplay();
-  }, 60 * 60 * 1000);
+  }, 60 * 60 * 1000 );
 } );
 

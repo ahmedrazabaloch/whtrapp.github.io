@@ -264,12 +264,15 @@ input {
   fill: black;
 }
 
-.dev-info{
+.dev-info {
   margin: 0px;
 }
 
 .tomorrow-temperature {
   text-align: end;
+}
+#search-bar {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -298,23 +301,63 @@ input {
 
 @media (max-width: 768px) {
   .whtrlive {
-    flex-direction: column;
+    /* flex-direction: column; */
+    width: 100%;
   }
 
   .sidebar {
+    display: none;
     width: 94.5%;
     border-right: none;
     margin-bottom: 20px;
+    z-index: 1000;
+    overflow: visible;
   }
 
   .container {
-    width: 95%;
+    /* display: none; */
+    width: 100%;
     padding: 15px;
+    position: relative;
+  }
+
+  #search-bar {
+    display: block;
+    position: absolute;
+    right: 0%;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .top {
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
   }
 
   .cities {
     line-height: 2rem;
     font-size: 18px;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    /* width: 55%; */
+  }
+  .date,
+  .day,
+  .place {
+    margin: unset;
+  }
+  .place {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .left {
+    gap: 10px;
   }
 
   .weather-temperature .today-temperature {
@@ -322,11 +365,12 @@ input {
   }
 
   .tomorrow-temperature {
-    text-align: center;
+    width: 80%;
   }
 
   .time {
-    font-size: 36px;
+    /* font-size: 36px; */
+    width: 100%;
   }
 
   .clear-history {
@@ -338,6 +382,10 @@ input {
 
   .clear-history:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+  .explore-btn {
+    padding: 10px 16px;
+    font-size: 16px;
   }
 }
 
@@ -457,18 +505,12 @@ transform: translateY(-50%);
   scrollbar-color: #888 #f1f1f1;
 }
 
-@media screen and (max-width: 768px) {
-  .explore-btn {
-    padding: 10px 16px;
-    font-size: 16px;
-  }
-}
 footer {
   color: white;
   bottom: 0;
   right: 1.5%;
-  transform: translateX(-10%);
-  position: fixed;
+  /* transform: translateX(-10%); */
+  /* position: fixed; */
   text-align: center;
   padding: 10px;
   font-size: 0.625rem;
@@ -491,4 +533,8 @@ footer {
   color: white;
   border-radius: 5px;
   padding: 10px 20px;
+}
+.bottom-box {
+  display: flex;
+  justify-content: space-between;
 }
